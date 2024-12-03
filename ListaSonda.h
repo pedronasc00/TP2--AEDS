@@ -17,8 +17,8 @@ typedef struct
 }LSonda;
 
 void FLVaziaSonda(LSonda* sLista);
-void InsereSondas(LSonda* sLista, Sonda sondas[]);
-void LImprime(LSonda* sLista);
+void InsereSondas(LSonda* sLista);
+void LImprimeSonda(LSonda* sLista);
 int Peso_Sonda(LSonda* sonda);
 int Valor_Sonda(LSonda* sonda);
 

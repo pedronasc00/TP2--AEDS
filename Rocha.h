@@ -7,6 +7,6 @@ typedef struct
     int pesoI; 
 }Rocha;
 
-void InicializaRocha(Rocha* rch, int valorI, int pesoI);
+void InicializaRocha(Rocha* rch, int pesoI, int valorI);
 
 #endif

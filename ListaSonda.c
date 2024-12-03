@@ -9,16 +9,31 @@ void FLVaziaSonda(LSonda* sLista){
     sLista->pUltimo->pProx = NULL;
 }
 
-void InsereSondas(LSonda* sLista, Sonda* sondas[]){
-    sondas[NUM_SONDAS];
-
+void InsereSondas(LSonda* sLista){
     for (int i = 0; i < NUM_SONDAS; i++)
     {
-        InicializaSonda(&sondas[i], i + 1);
+        Sonda* sondasI = (Sonda*)malloc(sizeof(Sonda));
+        InicializaSonda(sondasI, i + 1);
+        
         sLista->pUltimo->pProx = (ApontadorSonda)malloc(sizeof(CSonda));
         sLista->pUltimo = sLista->pUltimo->pProx;
-        sLista->pUltimo->sondas = *sondas[i];
+        sLista->pUltimo->sondas = *sondasI;
         sLista->pUltimo->pProx = NULL;   
     }
+}
 
+void LImprimeSonda(LSonda* sLista) {
+    ApontadorSonda pAux;
+    pAux = sLista->pPrimeiro->pProx;
+
+    printf("\nSONDAS\n");
+    printf("---------------------------------\n\n");
+    while (pAux != NULL) {
+        printf("ID SONDA: %d\n", pAux->sondas.id);
+        printf("Peso Total: %d\n", pAux->sondas.pesoAtual);
+        printf("Capacidade: %d\n\n", pAux->sondas.capacidade);
+
+        pAux = pAux->pProx;
+    }
+    printf("---------------------------------\n");
 }

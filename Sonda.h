@@ -6,7 +6,8 @@
 typedef struct 
 {
     int id;
-    float capacidade;
+    int capacidade;
+    int pesoAtual;
     LCompartimento CompartimentoR;
 }Sonda;
 

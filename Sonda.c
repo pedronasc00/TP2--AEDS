@@ -5,4 +5,5 @@
 void InicializaSonda(Sonda* sonda, int id){
     sonda->id = id;
     sonda->capacidade = MAXCAP;
+    sonda->pesoAtual = 0;
 }
