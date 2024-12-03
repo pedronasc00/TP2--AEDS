@@ -1,0 +1,2 @@
+- qual modificação deve ser feita nos TADs?
+- medir o tempo de execução somente do código ou medir de forma geral?

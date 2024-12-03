@@ -1,0 +1,45 @@
+Implementação do Problema do Compartimento:
+
+- Criar uma nova implementação (não reaproveitar o TP1), em linguagem C, para o "Problema do Compartimento". O objetivo é maximizar o valor dos itens em um compartimento de capacidade C, dada uma lista de N itens, cada um com peso (p) e valor (v).
+
+- A solução deve considerar todas as combinações possíveis de itens para cada sonda, calculando o valor total e o peso total de cada combinação.
+
+- Devem ser utilizadas as combinações de 1 até N itens.
+
+- A combinação escolhida para cada sonda deve ter o maior valor agregado possível, sem ultrapassar a capacidade C do compartimento. Em caso de empate, escolher a combinação com maior número de itens.
+
+- As rochas minerais já alocadas em uma sonda não podem ser reutilizadas nas sondas subsequentes.
+
+- O programa deve receber como entrada um arquivo contendo N (na primeira linha) e, nas linhas seguintes, os pares peso-valor de cada rocha mineral, separados por espaço.
+
+- Os valores de X (número de sondas, fixo em 3) e C (capacidade do compartimento, fixo em 40) devem ser declarados internamente no código.
+
+- Reutilizar os TADs (Tipos Abstratos de Dados) implementados no TP1: Mineral, Rocha Mineral, Compartimento e Sonda.
+
+Algoritmo de Combinação:
+
+- Pesquisar e implementar (ou adaptar para C) um algoritmo que gere todas as combinações possíveis de X elementos em um conjunto de N elementos. A ordem dos elementos na combinação não importa (combinação simples).
+
+Avaliação de Desempenho:
+
+- Executar o programa com diferentes valores de N (10, 15, 20, 25, 50) e medir o tempo de execução para cada valor, usando uma ferramenta como o comando time do Unix.
+
+- Analisar o impacto do tamanho da entrada (N) no tempo de execução.
+
+Relatório:
+
+Escrever um relatório, utilizando o template do TP1, contendo:
+
+- Explicação do código: funcionamento do algoritmo de combinação, como o programa calcula as combinações, critério de seleção da melhor combinação, etc.
+
+- Configurações de hardware e software da máquina utilizada nos testes.
+
+- Resultados dos tempos de execução para cada valor de N.
+
+- Resposta à pergunta: É razoável executar o algoritmo para N >= 100? Justificar.
+
+Entrega:
+
+Entregar o código-fonte (em C) e o relatório em um arquivo compactado (.zip ou .tar.gz) via PVANet, com os nomes e matrículas dos integrantes da dupla.
+
+Em resumo, o trabalho envolve implementar uma solução de força bruta para o Problema do Compartimento, analisar seu desempenho para diferentes entradas, e discutir a viabilidade da solução para entradas maiores. A chave aqui é a implementação do algoritmo de combinação e a análise do impacto do seu desempenho no tempo de execução do programa.
