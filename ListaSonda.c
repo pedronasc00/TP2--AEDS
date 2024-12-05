@@ -37,3 +37,39 @@ void LImprimeSonda(LSonda* sLista) {
     }
     printf("---------------------------------\n");
 }
+
+int Peso_Sondas(LSonda* sLista) {
+    
+    int pesoSonda = 0;
+
+    if (sLista == NULL || sLista->pPrimeiro->pProx->sondas.CompartimentoR.pPrimeiro->pProx == NULL) {
+        return 0;
+    }
+    ApontadorRocha pAux;
+    pAux = sLista->pPrimeiro->pProx->sondas.CompartimentoR.pPrimeiro->pProx;
+    
+    while (pAux != NULL) {
+        pesoSonda += pAux->ItemRocha.pesoI;
+        pAux = pAux->pProx;
+    }
+
+    return pesoSonda;
+}
+
+int Valor_Sondas(LSonda* sLista) {
+    
+    int valorSonda = 0;
+
+    if (sLista == NULL || sLista->pPrimeiro->pProx->sondas.CompartimentoR.pPrimeiro->pProx == NULL) {
+        return 0;
+    }
+    ApontadorRocha pAux;
+    pAux = sLista->pPrimeiro->pProx->sondas.CompartimentoR.pPrimeiro->pProx;
+    
+    while (pAux != NULL) {
+        valorSonda += pAux->ItemRocha.valorI;
+        pAux = pAux->pProx;
+    }
+
+    return valorSonda;
+}

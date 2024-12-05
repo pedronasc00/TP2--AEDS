@@ -34,4 +34,8 @@ int main() {
     }
     
     LImprimeRocha(&ListaDistribuidora);
+    
+    ListaSondas.pPrimeiro->pProx->sondas.CompartimentoR.pPrimeiro->pProx->ItemRocha.pesoI = 33;
+
+    printf(Peso_Sonda);
 }
