@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "ListaSonda.h"
+#include "combinacao.h"
 
 int main() {
     LSonda ListaSondas;
@@ -24,7 +24,6 @@ int main() {
     FLVaziaRocha(&ListaDistribuidora);
 
     InsereSondas(&ListaSondas);
-    LImprimeSonda(&ListaSondas);
 
     for(int i = 0; i < N; i++){
         Rocha rochaI;
@@ -32,10 +31,6 @@ int main() {
         InicializaRocha(&rochaI, pesoI, valorI);
         InsereRocha(&ListaDistribuidora, &rochaI);
     }
-    
-    LImprimeRocha(&ListaDistribuidora);
-    
-    ListaSondas.pPrimeiro->pProx->sondas.CompartimentoR.pPrimeiro->pProx->ItemRocha.pesoI = 33;
 
-    printf(Peso_Sonda);
+    problemaMochila(&ListaSondas, &ListaDistribuidora, N);
 }

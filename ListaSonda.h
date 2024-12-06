@@ -6,7 +6,7 @@
 typedef struct CelulaSonda *ApontadorSonda;
 typedef struct CelulaSonda
 {
-    Sonda sondas;
+    Sonda *sondas;
     struct CelulaSonda *pProx;
 }CSonda;
 
@@ -21,5 +21,6 @@ void InsereSondas(LSonda* sLista);
 void LImprimeSonda(LSonda* sLista);
 int Valor_Sondas(LSonda* sLista);
 int Peso_Sondas(LSonda* sLista);
+void liberarSondas(LSonda* sLista);
 
 #endif
