@@ -4,15 +4,26 @@
 
 void FLVaziaRocha(LCompartimento* rLista) {
     rLista->pPrimeiro = (ApontadorRocha)malloc(sizeof(CCompartimento));
-    rLista->pUltimo = rLista->pPrimeiro;
     rLista->pPrimeiro->pProx = NULL;
+    rLista->pUltimo = rLista->pPrimeiro;
 }
 
 void InsereRocha(LCompartimento* rLista, Rocha* pRocha) {
-    rLista->pUltimo->pProx = (ApontadorRocha)malloc(sizeof(CCompartimento));
-    rLista->pUltimo = rLista->pUltimo->pProx;
-    rLista->pUltimo->ItemRocha = *pRocha;
-    rLista->pUltimo->pProx = NULL;
+    ApontadorRocha novoNo = (ApontadorRocha)malloc(sizeof(CCompartimento));
+    if (novoNo == NULL) {
+        perror("Erro de alocação de memória");
+        exit(EXIT_FAILURE); // Ou trate o erro de outra forma
+    }
+    novoNo->ItemRocha = *pRocha;
+    novoNo->pProx = NULL;
+
+    if (rLista->pPrimeiro->pProx == NULL) { // Primeiro elemento depois do nó cabeça
+        rLista->pPrimeiro->pProx = novoNo;
+        rLista->pUltimo = novoNo; // Atualiza pUltimo
+    } else {
+        rLista->pUltimo->pProx = novoNo;
+        rLista->pUltimo = novoNo; // Atualiza pUltimo
+    }
 }
 
 void LImprimeRocha(LCompartimento* rLista) {

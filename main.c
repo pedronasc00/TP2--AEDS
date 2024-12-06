@@ -25,12 +25,15 @@ int main() {
 
     InsereSondas(&ListaSondas);
 
+    printf("AAA\n");
+
     for(int i = 0; i < N; i++){
         Rocha rochaI;
         fscanf(arq, "%d %d", &pesoI, &valorI);
         InicializaRocha(&rochaI, i++, pesoI, valorI);
         InsereRocha(&ListaDistribuidora, &rochaI);
     }
+    printf("AAAAA\n");
 
     problemaMochila(&ListaSondas, &ListaDistribuidora, N);
     
