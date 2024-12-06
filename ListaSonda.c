@@ -29,7 +29,7 @@ void LImprimeSonda(LSonda* sLista) {
     printf("\nSONDAS\n");
     printf("---------------------------------\n\n");
     while (pAux != NULL) {
-        printf("ID SONDA: %d\n", pAux->sondas->id);
+        printf("ID SONDA: %d\n", pAux->sondas->idSonda);
         printf("Peso Total: %d\n", pAux->sondas->pesoAtual);
         printf("Capacidade: %d\n\n", pAux->sondas->capacidade);
 

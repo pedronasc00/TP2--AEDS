@@ -28,9 +28,10 @@ int main() {
     for(int i = 0; i < N; i++){
         Rocha rochaI;
         fscanf(arq, "%d %d", &pesoI, &valorI);
-        InicializaRocha(&rochaI, pesoI, valorI);
+        InicializaRocha(&rochaI, i++, pesoI, valorI);
         InsereRocha(&ListaDistribuidora, &rochaI);
     }
 
     problemaMochila(&ListaSondas, &ListaDistribuidora, N);
+    
 }

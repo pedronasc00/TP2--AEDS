@@ -41,6 +41,21 @@ void gerar_combinacoes(int N, int K, LCompartimento *rLista, int *tamanho_rochas
     
 }
 
+void ImprimeSolucao(Sonda* sonda) {
+    printf("Sonda %d: Peso %d, Valor %d, Solução [", sonda->idSonda, 
+    sonda->pesoAtual, ValorSonda(&sonda->CompartimentoR));
+
+    ApontadorRocha rAux = sonda->CompartimentoR.pPrimeiro->pProx;
+    while (rAux != NULL) {
+        printf("%d", rAux->ItemRocha.idRocha);
+        if (rAux->pProx != NULL) {
+            printf(", ");
+        }
+        rAux = rAux->pProx;
+    }
+    printf("]\n");
+}
+
 void problemaMochila(LSonda* sLista, LCompartimento* rLista, int N) {
     ApontadorSonda sAux = sLista->pPrimeiro->pProx;
     while (sAux != NULL) {
@@ -82,6 +97,10 @@ void problemaMochila(LSonda* sLista, LCompartimento* rLista, int N) {
         }
 
         RemoveRochasIguais(&melhorCombinacao, rLista);
+
+        sondaAtual->pesoAtual = PesoSonda(&(sondaAtual->CompartimentoR));
+        sondaAtual->valorAtual = ValorSonda(&(sondaAtual->CompartimentoR));
+        ImprimeSolucao(sondaAtual);
 
         LiberarRochas(&melhorCombinacao);
         sAux = sAux->pProx;
