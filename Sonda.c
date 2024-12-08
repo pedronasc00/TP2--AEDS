@@ -2,16 +2,13 @@
 #include <stdlib.h>
 #include "Sonda.h"
 
-void InicializaSonda(Sonda *sonda, int idSonda)
-{
+void InicializaSonda(Sonda *sonda, int idSonda) {
     sonda->idSonda = idSonda;
     sonda->capacidade = MAXCAP;
-    sonda->pesoAtual = 0;
-    sonda->valorAtual = 0;
+    FLVaziaRocha(&sonda->CompartimentoR);
 }
 
-int PesoSonda(LCompartimento *CompartimentoSonda)
-{
+int PesoSonda(LCompartimento *CompartimentoSonda) {
 
     int pesoSonda = 0;
 
@@ -25,8 +22,7 @@ int PesoSonda(LCompartimento *CompartimentoSonda)
     return pesoSonda;
 }
 
-int ValorSonda(LCompartimento *CompartimentoSonda)
-{
+int ValorSonda(LCompartimento *CompartimentoSonda) {
 
     int valorSonda = 0;
 

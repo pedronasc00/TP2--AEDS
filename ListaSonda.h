@@ -6,7 +6,7 @@
 typedef struct CelulaSonda *ApontadorSonda;
 typedef struct CelulaSonda
 {
-    Sonda *sondas;
+    Sonda ItemSonda;
     struct CelulaSonda *pProx;
 } CSonda;
 
@@ -17,8 +17,10 @@ typedef struct
 } LSonda;
 
 void FLVaziaSonda(LSonda *sLista);
-void InsereSondas(LSonda *sLista);
 void LImprimeSonda(LSonda *sLista);
-void liberarSondas(LSonda *sLista);
+void LInsereSondas(LSonda *sLista, Sonda* pSonda);
+int knapsack(Rocha rochas[], int n, int capacity, int *selecionados, int *usados);
+void ordenarArray(int array[], int tamanho);
+void resolverSondas(LSonda *ListaS, int n_sondas, Rocha rochas[], int n);
 
 #endif

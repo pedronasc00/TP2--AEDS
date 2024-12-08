@@ -1,13 +1,11 @@
 #ifndef ROCHA_H
 #define ROCHA_H
 
-typedef struct
-{
-    int idRocha;
+typedef struct {
     int pesoI;
     int valorI;
 } Rocha;
 
-void InicializaRocha(Rocha *rch, int idRocha, int pesoI, int valorI);
+void InicializaRocha(Rocha *rch, int pesoI, int valorI);
 
 #endif
