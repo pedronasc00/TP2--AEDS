@@ -3,17 +3,17 @@
 #include "Compartimento.h"
 #define MAXCAP 40
 
-typedef struct 
+typedef struct
 {
     int idSonda;
     int capacidade;
     int pesoAtual;
     int valorAtual;
     LCompartimento CompartimentoR;
-}Sonda;
+} Sonda;
 
-void InicializaSonda(Sonda* sonda, int idSonda);
-int PesoSonda(LCompartimento* CompartimentoSonda);
-int ValorSonda(LCompartimento* CompartimentoSonda);
+void InicializaSonda(Sonda *sonda, int idSonda);
+int PesoSonda(LCompartimento *CompartimentoSonda);
+int ValorSonda(LCompartimento *CompartimentoSonda);
 
 #endif

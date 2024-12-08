@@ -4,10 +4,10 @@
 typedef struct
 {
     int idRocha;
-    int pesoI; 
+    int pesoI;
     int valorI;
-}Rocha;
+} Rocha;
 
-void InicializaRocha(Rocha* rch, int idRocha, int pesoI, int valorI);
+void InicializaRocha(Rocha *rch, int idRocha, int pesoI, int valorI);
 
 #endif

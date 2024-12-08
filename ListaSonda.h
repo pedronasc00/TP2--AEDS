@@ -8,17 +8,17 @@ typedef struct CelulaSonda
 {
     Sonda *sondas;
     struct CelulaSonda *pProx;
-}CSonda;
+} CSonda;
 
-typedef struct 
+typedef struct
 {
     ApontadorSonda pPrimeiro;
     ApontadorSonda pUltimo;
-}LSonda;
+} LSonda;
 
-void FLVaziaSonda(LSonda* sLista);
-void InsereSondas(LSonda* sLista);
-void LImprimeSonda(LSonda* sLista);
-void liberarSondas(LSonda* sLista);
+void FLVaziaSonda(LSonda *sLista);
+void InsereSondas(LSonda *sLista);
+void LImprimeSonda(LSonda *sLista);
+void liberarSondas(LSonda *sLista);
 
 #endif

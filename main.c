@@ -3,14 +3,15 @@
 #include <string.h>
 #include "combinacao.h"
 
-int main() {
+int main()
+{
     LSonda ListaSondas;
     LCompartimento ListaDistribuidora;
     Sonda sondas[3];
     int valorI, pesoI;
-    
+
     printf("Nome do arquivo de entrada: ");
-    
+
     char nomearq[33];
     FILE *arq;
     scanf("%32s", nomearq);
@@ -27,7 +28,8 @@ int main() {
 
     printf("AAA\n");
 
-    for(int i = 0; i < N; i++){
+    for (int i = 0; i < N; i++)
+    {
         Rocha rochaI;
         fscanf(arq, "%d %d", &pesoI, &valorI);
         InicializaRocha(&rochaI, i++, pesoI, valorI);
@@ -36,5 +38,4 @@ int main() {
     printf("AAAAA\n");
 
     problemaMochila(&ListaSondas, &ListaDistribuidora, N);
-    
 }

@@ -6,20 +6,20 @@ typedef struct TCelulaRocha *ApontadorRocha;
 typedef struct TCelulaRocha
 {
     Rocha ItemRocha;
-    struct TCelulaRocha *pProx; 
-}CCompartimento;
+    struct TCelulaRocha *pProx;
+} CCompartimento;
 
-typedef struct 
+typedef struct
 {
     ApontadorRocha pPrimeiro;
     ApontadorRocha pUltimo;
-}LCompartimento;
+} LCompartimento;
 
-void FLVaziaRocha(LCompartimento* rLista);
-void InsereRocha(LCompartimento* rLista, Rocha* pRocha);
-void LImprimeRocha(LCompartimento* rLista);
-void LiberarRochas(LCompartimento* rLista);
+void FLVaziaRocha(LCompartimento *rLista);
+void InsereRocha(LCompartimento *rLista, Rocha *pRocha);
+void LImprimeRocha(LCompartimento *rLista);
+void LiberarRochas(LCompartimento *rLista);
 void CopiaCompartimento(LCompartimento *origem, LCompartimento *destino);
-void RemoveRochasIguais(LCompartimento* rochasRem, LCompartimento* listaDistribuidora);
+void RemoveRochasIguais(LCompartimento *rochasRem, LCompartimento *listaDistribuidora);
 
 #endif
