@@ -9,5 +9,6 @@ typedef struct
 }Rocha;
 
 void InicializaRocha(Rocha* rch, int idRocha, int pesoI, int valorI);
+int comparar_rochas(const void *a, const void *b);
 
 #endif

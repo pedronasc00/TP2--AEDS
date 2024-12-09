@@ -16,10 +16,8 @@ typedef struct
 }LCompartimento;
 
 void FLVaziaRocha(LCompartimento* rLista);
-void InsereRocha(LCompartimento* rLista, Rocha* pRocha);
+int LEVaziaRocha(LCompartimento* rLista);
+void LInsereRocha(LCompartimento* rLista, Rocha* pRocha);
 void LImprimeRocha(LCompartimento* rLista);
-void LiberarRochas(LCompartimento* rLista);
-void CopiaCompartimento(LCompartimento *origem, LCompartimento *destino);
-void RemoveRochasIguais(LCompartimento* rochasRem, LCompartimento* listaDistribuidora);
 
 #endif
