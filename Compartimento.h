@@ -6,14 +6,14 @@ typedef struct TCelulaRocha *ApontadorRocha;
 typedef struct TCelulaRocha
 {
     Rocha ItemRocha;
-    struct TCelulaRocha *pProx; 
-}CCompartimento;
+    struct TCelulaRocha *pProx;
+} CCompartimento;
 
-typedef struct 
+typedef struct
 {
     ApontadorRocha pPrimeiro;
     ApontadorRocha pUltimo;
-}LCompartimento;
+} LCompartimento;
 
 void FLVaziaRocha(LCompartimento* rLista);
 int LEVaziaRocha(LCompartimento* rLista);

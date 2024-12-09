@@ -2,14 +2,14 @@
 #define SONDA_H
 #include "Compartimento.h"
 
-typedef struct 
+typedef struct
 {
     int idSonda;
     float capacidade;
     float pesoAtual;
     int valorAtual;
     LCompartimento CompartimentoR;
-}Sonda;
+} Sonda;
 
 void InicializaSonda(Sonda* sonda, int idSonda);
 

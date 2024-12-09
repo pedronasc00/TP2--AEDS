@@ -8,13 +8,13 @@ typedef struct CelulaSonda
 {
     Sonda sondas;
     struct CelulaSonda *pProx;
-}CSonda;
+} CSonda;
 
-typedef struct 
+typedef struct
 {
     ApontadorSonda pPrimeiro;
     ApontadorSonda pUltimo;
-}LSonda;
+} LSonda;
 
 void FLVaziaSonda(LSonda* sLista);
 int LEVaziaSonda(LSonda* sLista);

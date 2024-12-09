@@ -3,7 +3,7 @@
 #include "Sonda.h"
 #define MAXCAP 40
 
-void InicializaSonda(Sonda* sonda, int idSonda) {
+void InicializaSonda(Sonda *sonda, int idSonda) {
     sonda->idSonda = idSonda;
     sonda->capacidade = MAXCAP;
     sonda->pesoAtual = 0;

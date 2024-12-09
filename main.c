@@ -14,7 +14,7 @@ int main() {
     int QtdSondas = 3;
     
     printf("Nome do arquivo de entrada: ");
-    
+
     char nomearq[33];
     FILE *arq;
     scanf("%32s", nomearq);
@@ -23,7 +23,7 @@ int main() {
     int N;
 
     fscanf(arq, "%d", &N);
-
+   
     FLVaziaSonda(&ListaSondas);
     
     for (int i = 0; i < QtdSondas; i++) {
