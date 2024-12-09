@@ -8,13 +8,6 @@ void FLVaziaRocha(LCompartimento *rLista) {
     rLista->pPrimeiro->pProx = NULL;
 }
 
-void LInsereRocha(LCompartimento* rLista, Rocha* pRocha) {
-    rLista->pUltimo->pProx = (ApontadorRocha)malloc(sizeof(CCompartimento));
-    rLista->pUltimo = rLista->pUltimo->pProx;
-    rLista->pUltimo->ItemRocha = *pRocha;
-    rLista->pUltimo->pProx = NULL;
-}
-
 void LInsereRocha(LCompartimento *rLista, Rocha *pRocha) {
     rLista->pPrimeiro->pProx = (ApontadorRocha)malloc(sizeof(CCompartimento));
     rLista->pUltimo = rLista->pUltimo->pProx;
